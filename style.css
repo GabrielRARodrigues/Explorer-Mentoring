@@ -8,7 +8,10 @@
   --background-color: #efefef;
   --background-button-color: #ff5374;
   --border-color: #e6e6f0;
-  --text-and-header-color: #535971;
+  --span-color: #c1bccc;
+  --span-color-hover: #5e5b63;
+  --text-color: #4e4958;
+  --subtitle-and-header-color: #535971;
   --text-font: 'Poppins', sans-serif;
   --title-font: 'Staatliches', cursive;
 }
@@ -23,7 +26,7 @@ body::before {
   display: block;
   width: 100%;
   height: 436px;
-  background-color: var(--text-and-header-color);
+  background-color: var(--subtitle-and-header-color);
   position: absolute;
   z-index: -1;
 }
@@ -56,10 +59,19 @@ form {
   padding: 64px;
   background: #ffffff;
   border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 fieldset {
   border: none;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .fieldset-wrapper legend {
@@ -67,7 +79,45 @@ fieldset {
   font-weight: 400;
   font-size: 24px;
   line-height: 34px;
-  color: var(--text-and-header-color);
+  color: var(--subtitle-and-header-color);
   padding-bottom: 16px;
   border-bottom: 1px solid var(--border-color);
+  margin-bottom: 16px;
+}
+
+.input_name-wrapper {
+  display: flex;
+  gap: 22px;
+}
+
+.input_name-wrapper .input-wrapper {
+  flex-grow: 1;
+}
+
+.input-wrapper label {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.input-wrapper label span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--span-color);
+}
+
+.input-wrapper label span:hover {
+  color: var(--span-color-hover);
+}
+
+.input-wrapper input {
+  margin-top: 8px;
+  background: #fafafc;
+  height: 56px;
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+  width: 100%;
+  padding-left: 24px;
 }
