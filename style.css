@@ -18,6 +18,10 @@
 
 body {
   background-color: var(--background-color);
+}
+
+body,
+input {
   font-family: var(--text-font);
 }
 
@@ -120,4 +124,63 @@ fieldset {
   border-radius: 8px;
   width: 100%;
   padding-left: 24px;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.mentorship-card + .mentorship-card {
+  margin-top: 16px;
+}
+
+.mentorship-card h3 {
+  font-family: var(--title-font);
+  color: var(--subtitle-and-header-color);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  margin-bottom: 8px;
+}
+
+.input_date-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.input_date-wrapper .input-wrapper:nth-child(1) {
+  margin-right: 22px;
+  flex-grow: 2;
+}
+
+.input_date-wrapper .input-wrapper:nth-child(2),
+.input_date-wrapper .input-wrapper:nth-child(3) {
+  flex-grow: 1;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 72px;
+  height: 160px;
+  border-radius: 0px 0px 20px 20px;
+  background-color: var(--subtitle-and-header-color);
+  margin-bottom: 100px;
+}
+
+.button-wrapper button {
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  border: none;
+  color: white;
+  padding: 15px;
+  background-color: var(--background-button-color);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+.button-wrapper button:hover {
+  filter: brightness(0.8);
 }
